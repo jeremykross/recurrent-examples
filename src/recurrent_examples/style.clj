@@ -20,7 +20,8 @@
     [:* {:box-sizing "border-box"
          :margin 0
          :padding 0}]
-    [:a {:color "cornflowerblue"}]
+    [:a {:color "cornflowerblue"
+         :text-decoration "none"}]
     [:h1 {:font-size "24px"
           :font-weight "bold"}]]
    ["input[type=checkbox]" {:visibility "hidden"}]])
@@ -29,7 +30,9 @@
   [:#main {:display "flex"
            :height "100%"
            :width "100%"}
-   [:.menu {:width "256px"}
+   [:.menu {:width "296px"}
+    [:a {:display "block"
+         :margin-bottom "8px"}]
     [:.title {:padding "16px"
               :text-align "center"}]]
    [:.content {:box-shadow "-4px 0 32px rgba(0,0,0, 0.25)"

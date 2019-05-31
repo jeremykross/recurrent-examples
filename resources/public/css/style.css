@@ -26,6 +26,7 @@ body * {
 
 body a {
   color: cornflowerblue;
+  text-decoration: none;
 }
 
 body h1 {
@@ -58,7 +59,12 @@ input[type=checkbox] {
 }
 
 #main .menu {
-  width: 256px;
+  width: 296px;
+}
+
+#main .menu a {
+  display: block;
+  margin-bottom: 8px;
 }
 
 #main .menu .title {

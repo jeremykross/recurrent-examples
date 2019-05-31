@@ -16,7 +16,9 @@
          [:div {:id "main"}
           [:div {:class "menu"}
            [:div {:class "title"}
-            [:h1 {} "Recurrent Examples"]]]
+            [:h1 {} "Recurrent Examples"]
+            [:a {} "Hello World"]
+            [:a {} "State"]]]
           [:div {:class "content"}
            content]])
        (:recurrent/dom-$ content))}))
