@@ -24,6 +24,41 @@ body * {
   padding: 0;
 }
 
+body h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 input[type=checkbox] {
   visibility: hidden;
+}
+
+#hello-world input, h1, p {
+  margin-bottom: 16px;
+}
+
+#hello-world .message {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+#main .menu {
+  width: 256px;
+}
+
+#main .menu .title {
+  padding: 16px;
+  text-align: center;
+}
+
+#main .content {
+  box-shadow: -4px 0 32px rgba(0,0,0, 0.25);
+  flex: 1;
+  padding: 32px;
 }

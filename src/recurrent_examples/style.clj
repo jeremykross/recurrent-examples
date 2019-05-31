@@ -16,13 +16,35 @@
            :height "100%"}]
    [:#app {:width "100%"
            :height "100%"}]
-   [:body [:* {:box-sizing "border-box"
-               :margin 0
-               :padding 0}]]
+   [:body 
+    [:* {:box-sizing "border-box"
+         :margin 0
+         :padding 0}]
+    [:h1 {:font-size "24px"
+          :font-weight "bold"}]]
    ["input[type=checkbox]" {:visibility "hidden"}]])
 
+(def Main
+  [:#main {:display "flex"
+           :height "100%"
+           :width "100%"}
+   [:.menu {:width "256px"}
+    [:.title {:padding "16px"
+              :text-align "center"}]]
+   [:.content {:box-shadow "-4px 0 32px rgba(0,0,0, 0.25)"
+               :flex 1
+               :padding "32px"}]])
+
+(def Hello-World
+  [:#hello-world
+   ["input, h1, p" {:margin-bottom "16px"}]
+   [".message" {:font-style "italic"
+                :font-weight "bold"}]])
+
 (def styles
-  [Reset])
+  [Reset
+   Hello-World
+   Main])
 
 (defn spit-styles!
   []

@@ -1,4 +1,4 @@
-(ns recurrent-examples.hello-world
+(ns recurrent-examples.examples.hello-world
   (:require 
     recurrent.drivers.dom
     [ulmus.signal :as ulmus]
@@ -29,10 +29,12 @@
     {:recurrent/dom-$
      (ulmus/map
        (fn [[input-dom input-value]]
-         [:div {}
+         [:div {:id "hello-world"}
+          [:h1 {} "Hello World"]
+          [:p {} "Try changing the value in the text input to see the div below update automatically."]
           input-dom
-          [:br]
-          (str message " " input-value)])
+          [:div {:class "message"}
+           (str (or message "Howdy") " " input-value)]])
        (ulmus/zip
          (:recurrent/dom-$ input)
          (:value-$ input)))}))
