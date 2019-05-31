@@ -20,6 +20,7 @@
     [:* {:box-sizing "border-box"
          :margin 0
          :padding 0}]
+    [:a {:color "cornflowerblue"}]
     [:h1 {:font-size "24px"
           :font-weight "bold"}]]
    ["input[type=checkbox]" {:visibility "hidden"}]])
@@ -38,7 +39,9 @@
 (def Hello-World
   [:#hello-world
    ["input, h1, p" {:margin-bottom "16px"}]
-   [".message" {:font-style "italic"
+   [:a {:display "block"
+        :margin-bottom "16px"}]
+   [:.message {:font-style "italic"
                 :font-weight "bold"}]])
 
 (def styles

@@ -24,6 +24,10 @@ body * {
   padding: 0;
 }
 
+body a {
+  color: cornflowerblue;
+}
+
 body h1 {
   font-size: 24px;
   font-weight: bold;
@@ -34,6 +38,11 @@ input[type=checkbox] {
 }
 
 #hello-world input, h1, p {
+  margin-bottom: 16px;
+}
+
+#hello-world a {
+  display: block;
   margin-bottom: 16px;
 }
 
