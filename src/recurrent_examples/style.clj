@@ -24,7 +24,19 @@
          :text-decoration "none"}]
     [:h1 {:font-size "24px"
           :font-weight "bold"}]]
-   ["input[type=checkbox]" {:visibility "hidden"}]])
+   ["input[type=checkbox]" {:visibility "hidden"}]
+   [:.example
+     [:a {:display "block"
+          :margin-bottom "16px"}]
+     [:.message {:font-style "italic"
+                  :font-weight "bold"}]
+     [:.mono {:background "black"
+              :border-radius "4px"
+              :color "lime"
+              :font-family "monospace"
+              :padding "16px"}]]])
+
+
 
 (def Main
   [:#main {:display "flex"
@@ -41,11 +53,10 @@
 
 (def Hello-World
   [:#hello-world
-   ["input, h1, p" {:margin-bottom "16px"}]
-   [:a {:display "block"
-        :margin-bottom "16px"}]
-   [:.message {:font-style "italic"
-                :font-weight "bold"}]])
+   ["input, h1, p" {:margin-bottom "16px"}]])
+
+(def Left-Or-Right
+  [:#left-or-right])
 
 (def styles
   [Reset

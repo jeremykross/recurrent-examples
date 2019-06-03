@@ -28,12 +28,12 @@
     {:recurrent/dom-$
      (ulmus/map
        (fn [[input-dom input-value]]
-         [:div {:id "hello-world"}
+         [:div {:id "hello-world" :class "example"}
           [:h1 {} "Hello World"]
           [:a {:href "https://github.com/jeremykross/recurrent-examples/blob/master/src/recurrent_examples/examples/hello_world.cljs"
                :target "_blank"
                :rel "noopener noreferrer"} "Source"]
-          [:p {} "Try changing the value in the text input to see the div below update automatically."]
+          [:p "Try changing the value in the text input to see the div below update automatically."]
           input-dom
           [:div {:class "message"}
            (str (or message "Howdy") " " input-value)]])

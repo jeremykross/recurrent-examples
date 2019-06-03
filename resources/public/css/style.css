@@ -38,18 +38,26 @@ input[type=checkbox] {
   visibility: hidden;
 }
 
-#hello-world input, h1, p {
-  margin-bottom: 16px;
-}
-
-#hello-world a {
+.example a {
   display: block;
   margin-bottom: 16px;
 }
 
-#hello-world .message {
+.example .message {
   font-style: italic;
   font-weight: bold;
+}
+
+.example .mono {
+  background: black;
+  border-radius: 4px;
+  color: lime;
+  font-family: monospace;
+  padding: 16px;
+}
+
+#hello-world input, h1, p {
+  margin-bottom: 16px;
 }
 
 #main {
