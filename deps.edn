@@ -1,7 +1,7 @@
 {:deps {com.bhauman/figwheel-main {:mvn/version "0.1.9"}
         com.cemerick/url {:mvn/version "0.1.1"}
         garden {:mvn/version "1.3.6"}
-        recurrent {:local/root "/home/jkross/Projects/recurrent"}
-        ulmus {:local/root "/home/jkross/Projects/ulmus"}}
+        recurrent {:mvn/version "0.2.0"}
+        ulmus {:mvn/version "0.2.0"}}
  :paths ["src" "target" "resources"]}
 
