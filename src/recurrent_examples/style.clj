@@ -47,20 +47,58 @@
          :margin-bottom "8px"}]
     [:.title {:padding "16px"
               :text-align "center"}]]
-   [:.content {:box-shadow "-4px 0 32px rgba(0,0,0, 0.25)"
-               :flex 1
-               :padding "32px"}]])
+   [:.main-content {:box-shadow "-4px 0 32px rgba(0,0,0, 0.25)"
+                    :flex 1
+                    :padding "32px"}]])
 
-(def Hello-World
+(def HelloWorld
   [:#hello-world
    ["input, h1, p" {:margin-bottom "16px"}]])
 
-(def Left-Or-Right
+(def LeftOrRight
   [:#left-or-right])
+
+(def TodoFRP
+  [:#todo-frp
+   {:display "flex"
+    :flex-direction "column"
+    :margin-top "16px"}
+   [:.content {:width "512px"}
+    [:.todo {:border "1px solid lightgrey"
+             :cursor "pointer"
+             :display "flex"
+             :padding "16px"
+             :font-size "1.2rem"
+             :margin-left "42px"
+             :transition "opacity 500ms"}
+     [:&.completed {:opacity 0.5
+                    :text-decoration "line-through"}]
+     [:.close {:display "none"
+               :margin-left "auto"
+               :text-align "right"}]]
+    [".todo:hover .close" {:display "block"}]
+    [:.view-bar {:display "flex"
+                 :margin "16px 0"}
+     [:h4 {:margin-left "42px"
+           :margin-right "16px"}]
+     [:div {:cursor "pointer"
+            :margin-right "8px"}
+      [:&.selected {:font-weight "bold"}]]]
+    [:#what-needs-done
+     {:display "flex"}
+     [:.clear-all {:cursor "pointer"
+                   :font-size "1.3rem"
+                   :margin "16px"
+                   :transform "rotate(-90deg)"}]
+     [:input {:padding "16px"
+              :font-size "1.3rem"
+              :width "100%"}]]]])
 
 (def styles
   [Reset
-   Hello-World
+   HelloWorld
+   LeftOrRight
+   TodoFRP
    Main])
 
 (defn spit-styles!

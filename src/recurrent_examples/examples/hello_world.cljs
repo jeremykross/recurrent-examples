@@ -15,11 +15,12 @@
             ($ :recurrent/dom-$ ".my-input" "input")))]
 
     {:value-$ value-$
+
      :recurrent/dom-$
      (ulmus/map
        (fn [v] 
          [:div {}
-          [:input {:class "my-input" :type "text" :defaultValue initial-value}]])
+          [:input {:class "my-input" :type "text" :value v}]])
        value-$)}))
 
 (recurrent/defcomponent Main
@@ -46,6 +47,6 @@
   (recurrent/start!
     Main
     {:recurrent/dom-$
-     (recurrent.drivers.dom/create! "app")}
+     (recurrent.drivers.dom/render-into! "app")}
     "Howdy"))
 

@@ -60,6 +60,77 @@ input[type=checkbox] {
   margin-bottom: 16px;
 }
 
+#todo-frp {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+#todo-frp .content {
+  width: 512px;
+}
+
+#todo-frp .content .todo {
+  border: 1px solid lightgrey;
+  cursor: pointer;
+  display: flex;
+  padding: 16px;
+  font-size: 1.2rem;
+  margin-left: 42px;
+  transition: opacity 500ms;
+}
+
+#todo-frp .content .todo.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+#todo-frp .content .todo .close {
+  display: none;
+  margin-left: auto;
+  text-align: right;
+}
+
+#todo-frp .content .todo:hover .close {
+  display: block;
+}
+
+#todo-frp .content .view-bar {
+  display: flex;
+  margin: 16px 0;
+}
+
+#todo-frp .content .view-bar h4 {
+  margin-left: 42px;
+  margin-right: 16px;
+}
+
+#todo-frp .content .view-bar div {
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+#todo-frp .content .view-bar div.selected {
+  font-weight: bold;
+}
+
+#todo-frp .content #what-needs-done {
+  display: flex;
+}
+
+#todo-frp .content #what-needs-done .clear-all {
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin: 16px;
+  transform: rotate(-90deg);
+}
+
+#todo-frp .content #what-needs-done input {
+  padding: 16px;
+  font-size: 1.3rem;
+  width: 100%;
+}
+
 #main {
   display: flex;
   height: 100%;
@@ -80,7 +151,7 @@ input[type=checkbox] {
   text-align: center;
 }
 
-#main .content {
+#main .main-content {
   box-shadow: -4px 0 32px rgba(0,0,0, 0.25);
   flex: 1;
   padding: 32px;

@@ -1,10 +1,10 @@
 (ns recurrent-examples.examples.left-or-right
   (:require 
     recurrent.drivers.dom
+    [recurrent.core :as recurrent :include-macros true]
     [ulmus.mouse :as mouse]
     [ulmus.signal :as ulmus]
-    [ulmus.window :as window]
-    [recurrent.core :as recurrent :include-macros true]))
+    [ulmus.window :as window]))
 
 (recurrent/defcomponent Main
   []
@@ -36,5 +36,5 @@
   (recurrent/start!
     Main
     {:recurrent/dom-$
-     (recurrent.drivers.dom/create! "app")}))
+     (recurrent.drivers.dom/render-into! "app")}))
 
